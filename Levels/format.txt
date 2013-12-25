@@ -1,0 +1,18 @@
+. = empty
+/ = continuation (empty)
+| = long wall
+3 = short wall
+e = enemy
+p = platform
+f = floor
+c = player
+d = lava
+l = downward laser
+L = leftward laser
+t = sound trigger
+
+-weapon file
+-jetpack file
+-level prefix
+-background image
+-trigger sound list

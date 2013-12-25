@@ -1,0 +1,99 @@
+Game Development
+CS 600.255
+
+David Watson, dwatso20@jhu.edu
+Jed Estep, aje@jhu.edu
+Jeff Burka, jburka1@jhu.edu
+Arjun Saini, asaini2@jhu.edu
+
+Assignment 11
+
+-------
+
+Licenses
+
+The art for the player and enemy sprites is from the game Abuse, which has been released into
+the public domain (http://opengameart.org/content/abuse-art)
+Other art has also been released into the public domain and is available
+on opengameart.org
+
+The rest of our sprites are from opengameart.org
+
+The Devil Breeze font is freeware (http://www.fontspace.com/weslo/devil-breeze)
+
+Boop sound effect was created by Arjun Saini
+
+Explosion graphics courtesy of Ville Seppanen via opengameart.org
+
+Pacific Rim 8 Bit Arrangment by Kuso (https://www.youtube.com/watch?v=hWHlOIKr_oY)
+License unclear, we're trying to clarify with composer
+
+Code was written by the above four, with inspiration from Peter H. Fröhlich
+(http://gaming.jhu.edu/~phf/), particularly for the main update-draw loop
+
+-------
+
+Running:
+
+In the src directory run:
+
+python atlantic.py
+
+Use the arrow keys to navigate menus, and escape to go back or pause the game.
+
+Note: Requires Python 2.7
+
+-------
+
+Gameplay:
+
+Score:
+
+The player's score is the amount of time it took them to complete the level.
+
+Objective:
+
+The player wins if they reach the door at the end of the last level.
+
+The player loses if their health reaches 0
+
+Controls:
+
+Arrow keys to move, space to jump, WASD to shoot
+The default controls on controller *should* be: (may be different on assignment 11)
+    Face buttons: shoot
+    D-pad/left stick: move
+    Right trigger: space
+    Left trigger: enter
+    Start: escape
+
+Miscellany:
+
+Some jumps cannot be made without shooting down for some extra momentum
+
+Moving enemies deal damage to the player by touching it
+
+Laser drones are mounted on the ceiling; touching a laser currently
+causes instant death
+
+If a level is too difficult, adjust the spawn position in Levels/Level1.txt or
+Levels/Level2.txt by moving the "c" character anywhere in the level. Make sure
+to replace the old "c" with a "."
+
+-------
+
+For Assignment 9, we implemented the following fixes:
+
+1. Remove walljumping to make control smoother
+2. Fixed a bug causing the background to draw outside the level
+3. Fixed a bug causing platforms to draw while offscreen
+4. Scores now carry over between levels
+5. Lasers are destroyed when their parent drones are destroyed
+6. Modified the level builder to be able to take in different types
+    of images for the for the floor and walls based on the level name
+7. Player no longer takes damage from laser pre-cast
+8. Standing inside a dead lasercannon no longer causes the player to stand
+    in walk animation
+9. Moved cutscene to its own level
+10. High score screen now displays player's score even if their score
+    was not in the top 8
